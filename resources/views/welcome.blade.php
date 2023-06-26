@@ -23,5 +23,7 @@
             Are you a rockstar developer or kickass designer?
             Look no further! You've come to the right place.
         </p>
+
+        <a href="{{ route('jobs.index') }}">Check our jobs</a>
     </body>
 </html>
