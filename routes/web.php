@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/jobs', [\App\Http\Controllers\JobController::class, 'index'])->name('jobs.index');
+Route::get('jobs', [\App\Http\Controllers\JobController::class, 'index'])->name('jobs.index');
+Route::get('jobs/slug', [\App\Http\Controllers\JobController::class, 'show'])->name('jobs.show');
