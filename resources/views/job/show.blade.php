@@ -1,7 +1,7 @@
 <x-layout>
-    <x-slot:title>Job detail</x-slot:title>
+    <x-slot:title>{{ $vacancy->title }}</x-slot:title>
 
-    <h1>Job detail</h1>
+    <h1>{{ $vacancy->title }}</h1>
 
-    <p>This is a good job</p>
+    <p>{{ $vacancy->description }}</p>
 </x-layout>

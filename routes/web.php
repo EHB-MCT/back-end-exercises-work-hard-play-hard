@@ -18,4 +18,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('jobs', [\App\Http\Controllers\JobController::class, 'index'])->name('jobs.index');
-Route::get('jobs/slug', [\App\Http\Controllers\JobController::class, 'show'])->name('jobs.show');
+Route::get('jobs/{vacancy}', [\App\Http\Controllers\JobController::class, 'show'])->name('jobs.show');
+Route::get('vacancies/create', [\App\Http\Controllers\JobController::class, 'create'])->name('vacancies.create');
+Route::post('vacancies/store', [\App\Http\Controllers\JobController::class, 'store'])->name('vacancies.store');
