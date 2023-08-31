@@ -7,25 +7,25 @@ use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
-    function index()
+    public function index()
     {
         $vacancies = Vacancy::get();
         return view('job.index', compact('vacancies'));
     }
 
-    function show($vacancyId)
+    public function show($vacancyId)
     {
         $vacancy = Vacancy::find($vacancyId);
 
         return view('job.show', compact('vacancy'));
     }
 
-    function create()
+    public function create()
     {
         return view('job.create');
     }
 
-    function store(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'title' => 'required',
